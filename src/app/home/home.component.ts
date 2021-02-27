@@ -33,6 +33,11 @@ export class HomeComponent implements OnInit {
 
   }
 
+  public scrollToElement($element): boolean {
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    return false; // for preventing the page reload
+  }
+
   ngOnInit(): void {
   }
 
