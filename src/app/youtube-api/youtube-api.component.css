@@ -32,6 +32,7 @@
   }
   .owl-dots {
     margin-top: 30px;
+    display: none;
   }
   .uk-card-title {
     padding-bottom: 20px

@@ -512,7 +512,7 @@ a:focus {
 
 .feature .feature-item {
     min-height: 250px;
-    padding: 30px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -2234,3 +2234,16 @@ a:focus {
         text-align: center;
     }
 }
+
+
+.owl-dots {
+    margin-top: 30px;
+    display: none;
+  }
+
+  .owl-next {
+    background: #2b5b33 !important;
+  }
+  .owl-theme .owl-nav [class*='owl-'] {
+    background: #2b5b33 !important;
+  }
