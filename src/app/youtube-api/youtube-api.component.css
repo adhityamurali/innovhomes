@@ -1,0 +1,38 @@
+.uk-section {
+    background-color: white;
+  }
+  .owl-carousel {
+    position: relative;
+    margin-top: 30px;
+  }
+  .owl-nav {
+    position: absolute;
+    top: -60px;
+    left: 10px;
+  }
+  .uk-card-primary {
+    border-radius: 8px;
+  }
+  h3 {
+    margin-top: 10px
+  }
+  .uk-card > :last-child {
+    margin-top:0;
+    margin-bottom: 10px
+  }
+  p {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .owl-next {
+    background: #2b5b33 !important;
+  }
+  .owl-theme .owl-nav [class*='owl-'] {
+    background: #2b5b33 !important;
+  }
+  .owl-dots {
+    margin-top: 30px;
+  }
+  .uk-card-title {
+    padding-bottom: 20px
+  }

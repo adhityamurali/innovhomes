@@ -1,0 +1,18 @@
+<div class="uk-margin"></div>
+<div>
+    <div class="owl-carousel owl-theme">
+        <div *ngFor="let video of videos" class="col-xl-12 col-md-12 mb-12">
+            <div class="card border-0 shadow vh-50">
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                        <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">
+                            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}</a>
+                        </h5>
+                        <div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>
+                    </div>
+             </div>
+        </div>
+    </div>
+</div>
