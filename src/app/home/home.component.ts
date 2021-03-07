@@ -1,3 +1,6 @@
+
+declare var $:any;
+
 import { ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 
@@ -39,6 +42,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    $('.counter').counterUp({
+      delay: 20,
+      time: 1000
+  });
   }
 
 }
