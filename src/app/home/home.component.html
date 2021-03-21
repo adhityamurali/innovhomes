@@ -71,19 +71,28 @@
         <div class="nav-bar">
             <div  class="container-fluid">
                 <nav style="background-color: #2b5b33 !important;" class="navbar navbar-expand-lg bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand"><span><img id="navbar-logo" style="width: 55px;height: 50px;border-radius: 50px;" src="assets/img/logo2.png"></span>&nbsp;&nbsp;INNOV HOMES</a>
+                    <a href="#" class="navbar-brand">
+                        <span [style.display]="isMobileView ? 'inline' : 'none'" >
+                            <img id="navbar-logo" style="width: 55px;height: 50px;border-radius: 50px;" src="assets/img/logo2.png">
+                        </span>&nbsp;&nbsp;INNOV HOMES</a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
+                            <a href="#" class="navbar-brand" [style.display]="isDeskTopView ? 'inline' : 'none'" >
+                                <span>
+                                    <img id="navbar-logo" style="margin-top: -11%; width: 55px;height: 50px;border-radius: 50px;" src="assets/img/logo2.png">
+                                </span>
+                                <!-- &nbsp;&nbsp;INNOV HOMES -->
+                            </a>
                             <a id="home" href="index.html" class="nav-item nav-link" (click)="scrollToElement(home, 'home')">Home</a>
                             <a id="about" href="about.html" class="nav-item nav-link" (click)="scrollToElement(about, 'about')">About</a>
                             <a id="service" href="service.html" class="nav-item nav-link" (click)="scrollToElement(service, 'service')">Service</a>
  <!-- <a href="service.html" class="nav-item nav-link" (click)="scrollToElement(project, 'project')">Projects</a> -->
                             <a id="faq" href="team.html" class="nav-item nav-link"  (click)="scrollToElement(faq, 'faq')">FAQ's</a>
-                            <a id="vlog"  href="portfolio.html" class="nav-item nav-link" (click)="scrollToElement(vlog, 'vlog')">Vlogs</a>
+                            <a id="vlog" href="portfolio.html" class="nav-item nav-link" (click)="scrollToElement(vlog, 'vlog')">Vlogs</a>
                             <!--<div class="nav-item dropdown">
                                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a> 
                                 <div class="dropdown-menu">
@@ -305,7 +314,7 @@
                                 <img src="assets/img/service-1.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        Like every living beings, our homes must also breathe so that we fairly maintain even temperature inside our homes thereby boosting our physical and mental health.
                                     </p>
                                 </div>
                             </div>
@@ -321,7 +330,7 @@
                                 <img src="assets/img/service-2.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        Alternate cost-cut roofing practice done to cut-down unwanted concrete and steel usage.
                                     </p>
                                 </div>
                             </div>
@@ -337,7 +346,7 @@
                                 <img src="assets/img/service-3.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        With impressive tensile strength bamboo is the best alternate for steel, without any compromise in strength and quality.
                                     </p>
                                 </div>
                             </div>
@@ -353,7 +362,7 @@
                                 <img src="assets/img/service-4.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        To overcome the general misconceptions we aim to to popularize mud as prior building material to decentralize the construction process, thereby promoting local economy.
                                     </p>
                                 </div>
                             </div>
@@ -369,7 +378,7 @@
                                 <img src="assets/img/service-5.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        We always try to cut-down the volume of steel and cement usage as they show only resistence but no CO-EXISTENCE..!
                                     </p>
                                 </div>
                             </div>
@@ -385,7 +394,7 @@
                                 <img src="assets/img/service-6.jpg" alt="Image">
                                 <div class="service-overlay">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                        Ancient civilizations have shown us the best possibilities using lime as building material and we would like to carry the same knowledge and like to carry the same knowledge and love in creating not only a healthy home but a better environment.
                                     </p>
                                 </div>
                             </div>
@@ -623,7 +632,7 @@
                             <div class="card wow fadeInRight" data-wow-delay="0.4s">
                                 <div class="card-header">
                                     <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
-                                        waht is Carbon footprint of a building?
+                                        What is Carbon footprint of a building?
                                     </a>
                                 </div>
                                 <div id="collapseNine" class="collapse" data-parent="#accordion-2">

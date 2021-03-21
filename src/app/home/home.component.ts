@@ -14,11 +14,17 @@ export class HomeComponent implements OnInit {
   isShow: boolean;
   topPosToStartShowing = 100;
 
+  public isDeskTopView: boolean = false;
+  public isMobileView: boolean = false;
+  public screenWidth: number = 0;
+  public scrollPosition: number = 0;
+
+
   @HostListener('window:scroll')
   checkScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop ||
+    this.scrollPosition = window.pageYOffset || document.documentElement.scrollTop ||
       document.body.scrollTop || 0;
-    if (scrollPosition >= this.topPosToStartShowing) {
+    if (this.scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;
     } else {
       this.isShow = false;
@@ -27,6 +33,16 @@ export class HomeComponent implements OnInit {
     //set the Nav-bar anchor on scroll movement 
     this.keepTrack();
   }
+
+  // track thew desktop/mobile view for logo
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.screenWidth = window.innerWidth;
+    this.isDeskTopView = false;
+    this.isMobileView = false;
+    this.logoVisibility(this.scrollPosition > 50);
+  }
+
   private sections: string[] = ['carousel', 'feature-start', 'about-start', 'fact',
     'service-start', 'video-start', 'faq-start', 'vlog-start', 'contact-start'];
   private navBarElements = {
@@ -38,6 +54,10 @@ export class HomeComponent implements OnInit {
   keepTrack() {
     const viewHeight = window.innerHeight;
     let selectedId: string = '';
+
+    //logo visibility in the nav-bar
+    this.logoVisibility(this.scrollPosition > 50);
+
     for (var section of this.sections) {
       const element = document.getElementById(section);
       if (element != null) {
@@ -52,6 +72,16 @@ export class HomeComponent implements OnInit {
           }
         }
       }
+    }
+  }
+
+  private logoVisibility(isVisible: boolean) : void{
+    if(isVisible){
+      this.isDeskTopView = this.screenWidth > 992 ? isVisible : !isVisible;
+      this.isMobileView = this.screenWidth > 992 ? !isVisible : isVisible;
+    }else{
+      this.isMobileView = false;
+      this.isDeskTopView = false;
     }
   }
 
@@ -89,6 +119,7 @@ export class HomeComponent implements OnInit {
       delay: 20,
       time: 1000
   });
+  this.screenWidth = window.innerWidth;
   this.setActiveNavBar('home');
   }
 
