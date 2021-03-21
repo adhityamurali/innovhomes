@@ -1,7 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+declare var $:any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
