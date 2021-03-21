@@ -1,16 +1,30 @@
 
     <div class="owl-carousel owl-theme">
-        <div *ngFor="let video of videos" class="col-xl-12 col-md-12 mb-12">
-            <div class="card border-0 shadow vh-50">
-                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+        <div *ngFor="let video of videos" class="col-xl-12 col-md-12 mb-12" style="height: 100%;">
+            <div class="card border-0 shadow "  style=" height: 95%;">
+                    <!-- <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank"> -->
+                        
                         <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">
-                            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}</a>
+                        <div class="edit" ><a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank"><i style=" margin-left:33%;color: white;"class="fa fa-play fa-1x"></i></a></div>
+                    <!-- </a> -->
+                    
+                    <div class="card-body text-center" >
+                        <h5 class="card-title mb-0 font-weight-bold">
+                            <a href="https://www.youtube.com/watch?v={{video.id.videoId}} " target="_blank">{{video.snippet.title}}  </a>
                         </h5>
-                        <div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>
+                         <!-- <br>  -->
+                         <!-- <div class="card-text">{{video.snippet.description.slice(0, 100)}}</div>  -->
                     </div>
              </div>
         </div>
     </div>
+
+
+<!-- <div style="width: 100%;  text-align:center;margin:0; padding:0;">
+   <div class='col-md-12 col-sm-4'>
+	<ng-image-slider #nav [images]="videos" [showArrow]= "false" [infinite]="false" [autoSlide]="1"
+        [imageSize]="{width: '31%', height: 200 , space:14}" slideImage="1"></ng-image-slider>
+        <button id='prevclick' (click)="prevImageClick()" class="uk-margin-small-right uk-icon imgslider-icon" uk-icon="icon: chevron-left"></button>
+        <button id='nextclick'(click)="nextImageClick()" class="uk-margin-small-left uk-icon imgslider-icon" uk-icon="icon: chevron-right"></button>
+    </div>   
+</div> -->

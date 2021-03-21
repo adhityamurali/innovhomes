@@ -3,8 +3,9 @@
   }
   .owl-carousel {
     position: relative;
-    margin-top: 30px;
+    margin-top: 30px;  
   }
+ 
   .owl-nav {
     position: absolute;
     top: -60px;
@@ -37,3 +38,40 @@
   .uk-card-title {
     padding-bottom: 20px
   }
+
+  .card-text {
+    color: #2b5b33 !important;
+  }
+
+  .imgslider-icon {
+    background: #2b5b33 !important; 
+    color: white;
+    padding: 4px 6px;
+
+  }
+
+ ::ng-deep .owl-item {
+   height: 48vh;
+ }
+
+ ::ng-deep .card:hover .edit
+ {
+  display: block;
+  
+ }
+ 
+
+ .edit {
+	
+	position: absolute;
+	left: 45%;
+	top: 35%;
+  display: none;
+  background: red;
+  border-radius: 18%;
+  width: 35px;
+}
+
+.edit a {
+	color: #000;
+}
