@@ -75,7 +75,7 @@ a:focus {
 /**********************************/
 .top-bar {
     position: relative;
-    height: 90px;
+    /* height: 90px; */
     background: #98c838;
     
 }
@@ -140,7 +140,7 @@ a:focus {
 
 @media (min-width: 992px) {
     .top-bar {
-        padding: 0 60px;
+        padding: 0 50px;
     }
 }
 
