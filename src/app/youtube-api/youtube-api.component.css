@@ -50,9 +50,37 @@
 
   }
 
- ::ng-deep .owl-item {
-   height: 48vh;
+ ::ng-deep .img-size {
+   height: 45vh !important;
  }
+
+
+ @media screen and (max-width: 450px),
+        screen and (min-width: 400px)
+       /* screen and (max-height: 850px)  */
+       {
+  ::ng-deep .img-size {
+    height: 38vh; 
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  ::ng-deep  .img-size {
+    height: 46vh !important;
+  }
+}
+
+@media 
+      screen and (min-width: 1300),
+       screen and (min-height: 1020px) 
+       {
+  ::ng-deep .img-size {
+    height: 30vh !important; 
+  }
+}
+
+
+
 
  ::ng-deep .card:hover .edit
  {
