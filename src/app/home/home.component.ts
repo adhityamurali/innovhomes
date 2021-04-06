@@ -18,7 +18,12 @@ export class HomeComponent implements OnInit {
   public isMobileView: boolean = false;
   public screenWidth: number = 0;
   public scrollPosition: number = 0;
+  public header: string;
+  public serviceId: any;
 
+  public arr : Array<any>;
+  private mapArr = { "Breathable Homes": new Array(3), "Filler Slab": new Array(6), "Bamboo Boosters" : new Array(9),
+  "Mud Minds" : new Array(8), "Steel & Cement Reducers" : new Array(3), "Lime Lovers" : new Array(3)};
 
   @HostListener('window:scroll')
   checkScroll() {
@@ -123,4 +128,9 @@ export class HomeComponent implements OnInit {
   this.setActiveNavBar('home');
   }
 
+  public openService(serviceId, header){
+    this.serviceId = serviceId;
+    this.header = header;
+    this.arr = this.mapArr[header];
+  }
 }
