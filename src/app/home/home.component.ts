@@ -20,10 +20,13 @@ export class HomeComponent implements OnInit {
   public scrollPosition: number = 0;
   public header: string;
   public serviceId: any;
+selected : any
+i : any;
+
 
   public arr : Array<any>;
   private mapArr = { "Breathable Homes": new Array(3), "Filler Slab": new Array(6), "Bamboo Boosters" : new Array(9),
-  "Mud Minds" : new Array(8), "Steel & Cement Reducers" : new Array(3), "Lime Lovers" : new Array(3)};
+  "Mud Minds" : new Array(8), "Steel and Cement Reducers" : new Array(3), "Lime Lovers" : new Array(3)};
 
   @HostListener('window:scroll')
   checkScroll() {
@@ -120,6 +123,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.i = 0
     $('.counter').counterUp({
       delay: 20,
       time: 1000
@@ -128,9 +132,15 @@ export class HomeComponent implements OnInit {
   this.setActiveNavBar('home');
   }
 
-  public openService(serviceId, header){
-    this.serviceId = serviceId;
+  public openService(header){
+console.log(header)
     this.header = header;
     this.arr = this.mapArr[header];
+    console.log(this.arr)
   }
+
+  select(index) {
+    this.selected = index; 
+ };
+
 }
