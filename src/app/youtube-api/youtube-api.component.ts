@@ -48,9 +48,12 @@ export class YoutubeApiComponent implements OnInit {
       .getVideosForChanel('UCxtMsJZRzwi571js0zoICUw', 15) 
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(lists => {
-        console.log(lists, "lists")
+        //console.log(lists, "lists")
         for (let element of lists["items"]) {
           this.videos.push(element)
+          //console.log(element.snippet.title)
+          element.snippet.title = element.snippet.title.replace(/&amp;/g, "&").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;").replace(/&#39;/g, "'");
+          //console.log(element.snippet.title)
           // this.videos.push({video:`https://youtu.be/${element.id.videoId}`,title:element.snippet.title,alt:'youtube video'})
         }
       });  
