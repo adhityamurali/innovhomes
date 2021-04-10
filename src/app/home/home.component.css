@@ -1,13 +1,24 @@
 
 
 @media (min-width: 992px) {
-    .tagline{
-        margin-top: -2%;margin-left: 15%;letter-spacing: 5px;
+    .brandName{
+        margin-top: -5%;
+    }
+     .tagline{
+        margin-top: -2%;
+        margin-left: 26px;        
+        letter-spacing: 5px;
     }
 }
 
 @media (max-width: 991.98px) {
+    .brandName{
+        margin-top: -5%;
+        margin-left: 48px;
+    }
     .tagline{
-        margin-top: -2%;margin-left: 13%;letter-spacing: 5px;
+        margin-top: -2%;
+        margin-left: 64px;
+        letter-spacing: 5px;        
     }
 }
