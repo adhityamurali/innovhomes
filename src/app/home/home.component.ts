@@ -133,10 +133,8 @@ i : any;
   }
 
   public openService(header){
-console.log(header)
     this.header = header;
     this.arr = this.mapArr[header];
-    console.log(this.arr)
   }
 
   select(index) {
