@@ -139,6 +139,7 @@ a:focus {
     color: #2b5b33;
     font-size: 13px;
     font-weight: 400;
+    
 }
 
 @media (min-width: 992px) {
@@ -342,9 +343,20 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+
+    .carousel {
+     height: 250px;;
+    }
+
+    .carousel .carousel-indicators{
+display: none;
+    }
+
     .carousel .carousel-caption h1 {
         font-size: 40px;
         font-weight: 700;
+        
+        
     }
     
     .carousel .carousel-caption p {
@@ -817,7 +829,7 @@ a:focus {
     margin: 45px 0;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(3, 15, 39, .5), rgba(3, 15, 39, .9)), url(../img/carousel-3.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
