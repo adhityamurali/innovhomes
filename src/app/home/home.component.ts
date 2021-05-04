@@ -25,7 +25,7 @@ i : any;
 
 
   public arr : Array<any>;
-  private mapArr = { "Breathable Homes": new Array(3), "Filler Slab": new Array(6), "Bamboo Boosters" : new Array(9),
+  private mapArr = { "Breathable Homes": new Array(3), "Filler Slab": new Array(7), "Bamboo Boosters" : new Array(9),
   "Mud Minds" : new Array(8), "Steel and Cement Reducers" : new Array(3), "Lime Lovers" : new Array(3)};
 
   @HostListener('window:scroll')
